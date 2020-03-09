@@ -16,30 +16,32 @@
                 <div id="session-title" class="text">Time Left</div>
                 <div id="time-left" class="number">25:00</div>
                 <div class="session-buttons">
-                    <i class="fas fa-stop"></i>
-                    <i class="fas fa-play"></i>
-                    <i class="fas fa-pause"></i>
-                    <i class="fas fa-sync"></i>
+                    <i id="stop" class="fas fa-stop"></i>
+                    <i id="play" class="fas fa-play"></i>
+                    <i id="pause" class="fas fa-pause"></i>
+                    <i id="restart" class="fas fa-sync"></i>
                 </div>
             </div>
             <div class="settings">
                 <div class="opt">
                     <div class="settings-title text">Session</div>
                     <div class="setting-options number">
-                        <i class="fas fa-angle-down"></i>
-                        25
-                        <i class="fas fa-angle-up"></i>
+                        <i class="fas fa-angle-down" id="#session-time-dec"></i>
+                        <span id="session-time">25</span>
+                        <i class="fas fa-angle-up" id="#session-time-inc"></i>
                     </div>
                 </div>
                 <div class="opt">
                     <div class="settings-title text">Break</div>
                     <div class="setting-options number">
-                        <i class="fas fa-angle-down"></i>
-                        5
-                        <i class="fas fa-angle-up"></i>
+                        <i class="fas fa-angle-down" id="#break-time-dec"></i>
+                        <span id="break-time">5</span>
+                        <i class="fas fa-angle-up" id="#break-time-inc"></i>
                     </div>
                 </div>
             </div>
         </main>
+
+        <script src="pomodoro.js"></script>
     </body>
 </html>
