@@ -52,9 +52,32 @@ main div div {
 }
 
 .settings div {
-    display: inline-block;
+    display: inline-block;    
 }
 
 .settings div div {
     display: block;
+}
+
+#session-time {
+    display: inline-block;
+    width: 70px;
+}
+
+#break-time {
+    display: inline-block;
+    width: 70px;
+}
+
+.fas {
+    color: rgb(233, 30, 30);
+}
+
+
+.fas:hover {
+    color: rgb(233, 121, 30);
+}
+
+.fas:active {
+    color: yellowgreen;
 }

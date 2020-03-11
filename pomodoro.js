@@ -63,6 +63,14 @@ class PomoClock {
         if (this.timerState === TimerState.PLAY) {
             return;
         }
+        else if (this.timerState === TimerState.STOPPED) {
+            if (this.pomoState === PomoState.SESSION) {
+                this.timeLeft = this.sessionMins * secsInAMin;
+            }
+            else {
+                this.timeLeft = this.breakMins * secsInAMin;
+            }
+        }
         
         this.timerState = TimerState.PLAY;
         this.timer = setInterval(() => this.playClock(), 1000);
@@ -97,7 +105,7 @@ class PomoClock {
     }
 
     pauseClock() {
-        if (this.timerState = TimerState.PLAY) {
+        if (this.timerState === TimerState.PLAY) {
             this.timerState = TimerState.PAUSED;
             clearInterval(this.timer); 
         }
@@ -117,7 +125,7 @@ class PomoClock {
     }
 
     resetClock() {
-        this.PomoState = PomoState.SESSION;
+        this.pomoState = PomoState.SESSION;
         this.status.textContent = "Session";
         this.restartClock();
     }
